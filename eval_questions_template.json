@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q001",
+    "question": "What does functools.reduce raise if the given iterable is empty and no 'initial' value is provided?",
+    "gold_answer": "TypeError is raised.",
+    "gold_section_id": "functools#functools.reduce",
+    "gold_module": "functools"
+  },
+  {
+    "id": "q002",
+    "question": "What is the default value of the 'strict' argument to the zip() built-in as documented alongside itertools?",
+    "gold_answer": "False (added in Python 3.10; when True, zip() raises ValueError on mismatched lengths).",
+    "gold_section_id": "itertools#itertools.zip_longest",
+    "gold_module": "itertools"
+  },
+  {
+    "id": "q003",
+    "question": "What exception does os.path.getsize raise if the file does not exist?",
+    "gold_answer": "OSError (via os.stat failing).",
+    "gold_section_id": "os.path#os.path.getsize",
+    "gold_module": "os.path"
+  },
+  {
+    "id": "q004",
+    "question": "What does collections.Counter's most_common() method return when called with no argument?",
+    "gold_answer": "A list of all elements and their counts, ordered from most common to least common.",
+    "gold_section_id": "collections#collections.Counter.most_common",
+    "gold_module": "collections"
+  },
+  {
+    "id": "q005",
+    "question": "In re.sub, what happens if the pattern contains groups but the replacement string references a group number that doesn't exist?",
+    "gold_answer": "An error is raised (re.error / IndexError for the invalid group reference).",
+    "gold_section_id": "re#re.sub",
+    "gold_module": "re"
+  },
+  {
+    "id": "q006",
+    "question": "What does json.dumps do by default with non-ASCII characters in strings?",
+    "gold_answer": "It escapes them to ensure the output is ASCII-only, unless ensure_ascii=False is passed.",
+    "gold_section_id": "json#json.dumps",
+    "gold_module": "json"
+  },
+  {
+    "id": "q007",
+    "question": "What is the time complexity / behavior difference between os.listdir and os.scandir in terms of what information is returned?",
+    "gold_answer": "os.scandir returns DirEntry objects that expose file type/stat info without extra system calls in many cases, unlike os.listdir which returns only names.",
+    "gold_section_id": "os#os.scandir",
+    "gold_module": "os"
+  },
+  {
+    "id": "q008",
+    "question": "What does functools.lru_cache's 'maxsize' parameter do when set to None?",
+    "gold_answer": "The cache can grow without bound (no LRU eviction limit is applied).",
+    "gold_section_id": "functools#functools.lru_cache",
+    "gold_module": "functools"
+  },
+  {
+    "id": "q009",
+    "question": "What does collections.defaultdict do when you access a missing key?",
+    "gold_answer": "It calls the default_factory (with no arguments) to produce a value, inserts it under that key, and returns it, instead of raising KeyError.",
+    "gold_section_id": "collections#collections.defaultdict",
+    "gold_module": "collections"
+  },
+  {
+    "id": "q010",
+    "question": "What flag/argument controls whether re.match is case-insensitive?",
+    "gold_answer": "The re.IGNORECASE (or re.I) flag.",
+    "gold_section_id": "re#re.match",
+    "gold_module": "re"
+  }
+]
